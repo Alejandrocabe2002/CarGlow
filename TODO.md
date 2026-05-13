@@ -2,7 +2,6 @@
 
 ## Datos Pendientes
 
-- Sustituir `34XXXXXXXXX` por el numero real de WhatsApp.
 - Confirmar email real de contacto.
 - Confirmar dominio final.
 - Definir zona exacta de cobertura en Madrid.

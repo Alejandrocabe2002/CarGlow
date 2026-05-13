@@ -23,11 +23,14 @@ Servicios principales:
 
 ## Pendientes Criticos
 
-- Numero real de WhatsApp.
 - Email real.
 - Dominio.
 - Fotos reales.
 - Legales.
+
+## Contacto Confirmado
+
+- WhatsApp y telefono: +34 601 004 362.
 
 ## Estado Actual
 

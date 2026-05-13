@@ -34,6 +34,8 @@ Primera opcion recomendada: Cloudflare Pages.
 - Build command: `npm run build`
 - Output directory: `dist`
 - Framework preset: Astro
+- Deploy automatico: merge a `main` mediante Cloudflare Pages conectado a GitHub
+- CI: GitHub Actions ejecuta `npm ci` y `npm run build`
 
 Ver pasos completos en `DEPLOY.md`.
 
