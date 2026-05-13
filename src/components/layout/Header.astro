@@ -1,12 +1,33 @@
 ---
 import { site } from '../../data/site';
+
+const navItems = [
+  { label: 'Inicio', href: '#hero' },
+  { label: 'Servicios', href: '#servicios' },
+  { label: 'Contacto', href: '#contacto' },
+];
 ---
 
-<header class="border-b border-white/10 bg-neutral-950/80 text-white backdrop-blur">
-  <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4" aria-label="Navegacion principal">
-    <a href="/" class="text-sm font-semibold uppercase tracking-[0.25em]">{site.name}</a>
-    <a href={site.whatsapp.href} class="rounded-full bg-blue-500 px-4 py-2 text-sm font-semibold hover:bg-blue-400">
-      WhatsApp
+<header class="sticky top-0 z-50 border-b border-[var(--cg-hairline)] bg-white/95 backdrop-blur">
+  <nav class="container-cg flex h-16 items-center justify-between gap-6" aria-label="Navegacion principal">
+    <a href="/" class="flex items-center gap-3 text-sm font-bold uppercase tracking-[0.18em] text-[var(--cg-ink)]" aria-label="CarGlow inicio">
+      <span class="grid size-8 place-items-center border border-[var(--cg-ink)] text-[11px] tracking-normal">CG</span>
+      <span>{site.name}</span>
+    </a>
+
+    <div class="hidden items-center gap-8 md:flex">
+      {navItems.map((item) => (
+        <a href={item.href} class="text-sm font-normal tracking-[0.03em] text-[var(--cg-body)] transition hover:text-[var(--cg-ink)]">
+          {item.label}
+        </a>
+      ))}
+    </div>
+
+    <a
+      href={site.whatsapp.href}
+      class="inline-flex h-12 items-center justify-center bg-[var(--cg-primary)] px-5 text-sm font-bold tracking-[0.04em] text-white transition hover:bg-[var(--cg-primary-active)]"
+    >
+      Reservar
     </a>
   </nav>
 </header>

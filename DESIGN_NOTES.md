@@ -2,7 +2,7 @@
 
 ## Referencia Visual
 
-La direccion visual toma como referencia una estetica premium automotriz inspirada en el briefing de `FirstIteration.md.txt` y en la referencia BMW indicada por el usuario. No se copiara marca, logotipo, textos ni identidad de BMW.
+La direccion visual toma como referencia una estetica premium automotriz inspirada en el briefing de `FirstIteration.md.txt` y en `DESIGN.md`. No se copiara marca, logotipo, textos ni identidad de BMW.
 
 ## Adaptacion a CarGlow
 
@@ -10,11 +10,12 @@ CarGlow debe transmitir precision, limpieza, brillo, confianza y comodidad a dom
 
 ## Tokens Iniciales
 
-- Fondo principal: negro premium y neutrales oscuros.
-- Texto: blanco y grises claros.
-- Acento: azul premium/electrico para CTA.
-- Bordes: blanco con baja opacidad.
-- Espaciado: generoso, con composiciones limpias.
+- Canvas principal: blanco limpio.
+- Bandas clave: azul noche oscuro para hero y CTA.
+- Texto: tinta suave, grises tecnicos y blanco sobre fondos oscuros.
+- Acento: azul premium para CTA.
+- Bordes: hairlines sutiles.
+- Espaciado: ritmo de 80px en secciones principales.
 
 ## Principios UI
 
