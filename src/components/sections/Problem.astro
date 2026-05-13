@@ -1,1 +1,32 @@
-<!-- Placeholder para la seccion de problema. -->
+---
+import Badge from '../ui/Badge.astro';
+
+const problems = [
+  'Microaranazos por lavados incorrectos',
+  'Perdida de brillo por contaminacion, polvo y cal',
+  'Interior deteriorado por suciedad, bacterias y olores',
+];
+---
+
+<section id="problema" class="bg-white py-20 text-[var(--cg-ink)]">
+  <div class="container-cg grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-end">
+    <div>
+      <Badge>El problema</Badge>
+      <h2 class="mt-6 max-w-xl text-4xl font-bold leading-[1.1] md:text-5xl">
+        Tu coche es una inversion. No dejes que el uso diario apague su presencia.
+      </h2>
+    </div>
+
+    <div class="grid gap-px border border-[var(--cg-hairline)] bg-[var(--cg-hairline)] md:grid-cols-3">
+      {problems.map((problem, index) => (
+        <article class="bg-[var(--cg-surface-card)] p-6">
+          <p class="text-sm font-bold text-[var(--cg-primary)]">0{index + 1}</p>
+          <h3 class="mt-8 text-xl font-bold leading-snug">{problem}</h3>
+          <p class="mt-4 text-sm font-light leading-6 text-[var(--cg-body)]">
+            La suciedad acumulada y las tecnicas agresivas no solo ensucian: aceleran el desgaste visual del vehiculo.
+          </p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

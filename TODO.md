@@ -11,6 +11,7 @@
 ## Contenido Pendiente
 
 - Fotos reales antes/despues.
+- Sustituir placeholders de `Results.astro` por fotos reales antes/despues cuando existan.
 - Imagen principal del hero.
 - Testimonios reales verificables o aprobados.
 - Textos legales definitivos.

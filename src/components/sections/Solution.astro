@@ -1,1 +1,33 @@
-<!-- Placeholder para la seccion de solucion. -->
+---
+import Badge from '../ui/Badge.astro';
+
+const solutions = [
+  { label: 'Agua desmineralizada', detail: 'Reduce marcas, cal y residuos despues del secado.' },
+  { label: 'Productos biodegradables premium', detail: 'Limpieza eficaz con una seleccion cuidada para proteger materiales.' },
+  { label: 'Tecnicas seguras', detail: 'Procesos a mano pensados para minimizar friccion y microaranazos.' },
+  { label: 'Servicio a domicilio', detail: 'Nos desplazamos en Madrid para que no tengas que mover el coche.' },
+];
+---
+
+<section id="solucion" class="bg-[var(--cg-surface-dark)] py-20 text-white">
+  <div class="container-cg grid gap-12 lg:grid-cols-[1fr_1fr] lg:items-center">
+    <div>
+      <Badge tone="dark">Nuestra solucion</Badge>
+      <h2 class="mt-6 max-w-2xl text-4xl font-bold leading-[1.1] md:text-5xl">
+        Un estandar de limpieza pensado para cuidar pintura, interior y tiempo.
+      </h2>
+      <p class="mt-6 max-w-xl text-lg font-light leading-8 text-white/70">
+        En CarGlow combinamos tecnica, productos adecuados y desplazamiento a domicilio para entregar una experiencia premium sin complicaciones.
+      </p>
+    </div>
+
+    <div class="grid gap-px border border-white/15 bg-white/15 sm:grid-cols-2">
+      {solutions.map((solution) => (
+        <article class="bg-[var(--cg-surface-dark)] p-6">
+          <h3 class="text-xl font-bold leading-snug">{solution.label}</h3>
+          <p class="mt-4 text-sm font-light leading-6 text-white/70">{solution.detail}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

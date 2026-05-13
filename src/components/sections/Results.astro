@@ -1,1 +1,36 @@
-<!-- Placeholder para resultados antes/despues sin imagenes falsas. -->
+---
+import Badge from '../ui/Badge.astro';
+---
+
+<section id="resultados" class="bg-white py-20 text-[var(--cg-ink)]">
+  <div class="container-cg grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+    <div>
+      <Badge>Resultados reales</Badge>
+      <h2 class="mt-6 max-w-xl text-4xl font-bold leading-[1.1] md:text-5xl">
+        Preparado para mostrar antes y despues sin inventar pruebas visuales.
+      </h2>
+      <p class="mt-6 max-w-lg text-lg font-light leading-8 text-[var(--cg-body)]">
+        Esta seccion queda lista para sustituir los placeholders por fotografias reales de trabajos de CarGlow cuando esten disponibles.
+      </p>
+    </div>
+
+    <div class="grid gap-px border border-[var(--cg-hairline)] bg-[var(--cg-hairline)] md:grid-cols-2">
+      <article class="bg-[var(--cg-surface-card)] p-5">
+        <div class="grid aspect-[4/3] place-items-center border border-dashed border-[var(--cg-hairline-strong)] bg-white text-center">
+          <div>
+            <p class="text-xs font-bold uppercase tracking-[0.16em] text-[var(--cg-muted)]">Antes</p>
+            <p class="mt-3 text-sm font-light text-[var(--cg-body)]">Foto real pendiente</p>
+          </div>
+        </div>
+      </article>
+      <article class="bg-[var(--cg-surface-card)] p-5">
+        <div class="grid aspect-[4/3] place-items-center border border-dashed border-[var(--cg-hairline-strong)] bg-white text-center">
+          <div>
+            <p class="text-xs font-bold uppercase tracking-[0.16em] text-[var(--cg-primary)]">Despues</p>
+            <p class="mt-3 text-sm font-light text-[var(--cg-body)]">Foto real pendiente</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
