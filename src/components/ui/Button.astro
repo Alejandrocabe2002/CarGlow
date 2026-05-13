@@ -1,16 +1,18 @@
 ---
 interface Props {
   href: string;
-  variant?: 'primary' | 'secondary';
+  variant?: 'primary' | 'secondary' | 'secondaryLight';
   class?: string;
 }
 
 const { href, variant = 'primary', class: className = '' } = Astro.props;
-const classes = variant === 'primary'
-  ? 'bg-[var(--cg-primary)] text-white hover:bg-[var(--cg-primary-active)]'
-  : 'border border-white text-white hover:bg-white hover:text-[var(--cg-ink)]';
+const variants = {
+  primary: 'bg-[var(--cg-primary)] text-white hover:bg-[var(--cg-primary-active)]',
+  secondary: 'border border-white text-white hover:bg-white hover:text-[var(--cg-ink)]',
+  secondaryLight: 'border border-[var(--cg-hairline-strong,#cccccc)] bg-white text-[var(--cg-ink)] hover:border-[var(--cg-ink)]',
+};
 ---
 
-<a href={href} class={`inline-flex h-12 items-center justify-center px-8 text-sm font-bold tracking-[0.04em] transition ${classes} ${className}`}>
+<a href={href} class={`inline-flex h-12 items-center justify-center px-8 text-sm font-bold tracking-[0.04em] transition ${variants[variant]} ${className}`}>
   <slot />
 </a>

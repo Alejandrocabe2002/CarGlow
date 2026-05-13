@@ -1,3 +1,14 @@
-<span class="inline-flex rounded-full border border-blue-300/30 bg-blue-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-blue-200">
+---
+interface Props {
+  tone?: 'light' | 'dark';
+}
+
+const { tone = 'light' } = Astro.props;
+const classes = tone === 'dark'
+  ? 'border-white/25 text-white/80'
+  : 'border-[var(--cg-hairline)] text-[var(--cg-primary)]';
+---
+
+<span class={`inline-flex border px-3 py-1 text-xs font-bold uppercase tracking-[0.16em] ${classes}`}>
   <slot />
 </span>

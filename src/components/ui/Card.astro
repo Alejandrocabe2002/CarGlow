@@ -1,3 +1,11 @@
-<article class="rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-2xl shadow-black/20">
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+---
+
+<article class={`border border-[var(--cg-hairline)] bg-white p-6 ${className}`}>
   <slot />
 </article>
