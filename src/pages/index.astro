@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/sections/Hero.astro';
 import { site } from '../data/site';
 ---
 
@@ -7,30 +8,14 @@ import { site } from '../data/site';
   title={site.seo.title}
   description={site.seo.description}
 >
-  <main class="min-h-screen bg-neutral-950 text-white">
-    <section id="estado" class="mx-auto flex min-h-screen max-w-6xl flex-col justify-center px-6 py-20">
-      <p class="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-blue-300">
-        Detailing premium a domicilio en Madrid
-      </p>
-      <h1 class="max-w-4xl text-5xl font-semibold tracking-tight text-white md:text-7xl">
-        CarGlow empieza aquí.
-      </h1>
-      <p class="mt-6 max-w-2xl text-lg leading-8 text-neutral-300">
-        Repositorio inicializado con Astro, TypeScript y Tailwind. En la siguiente iteración construiremos la landing completa con enfoque premium, SEO local y CTA a WhatsApp.
-      </p>
-      <div class="mt-10 flex flex-col gap-3 sm:flex-row">
-        <a
-          href={site.whatsapp.href}
-          class="inline-flex items-center justify-center rounded-full bg-blue-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:ring-offset-neutral-950"
-        >
-          Reservar por WhatsApp
-        </a>
-        <a
-          href="#estado"
-          class="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3 text-sm font-semibold text-white transition hover:border-white/40 hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-white/30 focus:ring-offset-2 focus:ring-offset-neutral-950"
-        >
-          Ver pendientes
-        </a>
+  <main id="contenido">
+    <Hero />
+    <section id="servicios" class="bg-white py-20 text-[var(--cg-ink)]">
+      <div class="container-cg">
+        <p class="text-sm font-bold uppercase tracking-[0.16em] text-[var(--cg-primary)]">Siguiente fase</p>
+        <h2 class="mt-4 max-w-3xl text-4xl font-bold leading-tight md:text-5xl">
+          La estructura visual esta lista para desarrollar servicios, resultados, FAQ y contacto.
+        </h2>
       </div>
     </section>
   </main>

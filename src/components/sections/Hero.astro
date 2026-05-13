@@ -1,1 +1,64 @@
-<!-- Placeholder para la implementacion visual de la fase 2. -->
+---
+import Button from '../ui/Button.astro';
+import { site } from '../../data/site';
+---
+
+<section id="hero" class="bg-[var(--cg-surface-dark)] text-white">
+  <div class="container-cg grid min-h-[calc(100vh-4rem)] items-center gap-12 py-16 lg:grid-cols-[0.95fr_1.05fr] lg:py-20">
+    <div class="max-w-2xl">
+      <p class="text-sm font-bold uppercase tracking-[0.2em] text-white/70">
+        Limpieza premium de coches a domicilio en Madrid
+      </p>
+      <h1 class="mt-6 text-5xl font-bold leading-[1.05] text-white md:text-6xl lg:text-[64px]">
+        Tu coche no es solo transporte. Es una declaracion.
+      </h1>
+      <p class="mt-6 max-w-xl text-lg font-light leading-8 text-white/75">
+        Servicio profesional de limpieza y detailing a domicilio en Madrid desde 40 euros por coche. Nos desplazamos hasta ti para que no pierdas ni un minuto.
+      </p>
+
+      <div class="mt-10 flex flex-col gap-3 sm:flex-row">
+        <Button href={site.whatsapp.href}>Reservar por WhatsApp</Button>
+        <Button href="#servicios" variant="secondary">Ver servicios</Button>
+      </div>
+
+      <dl class="mt-12 grid max-w-xl grid-cols-3 border-y border-white/15 text-white">
+        <div class="py-5 pr-4">
+          <dt class="text-xs font-bold uppercase tracking-[0.14em] text-white/50">Desde</dt>
+          <dd class="mt-2 text-2xl font-bold">40 euros</dd>
+        </div>
+        <div class="border-x border-white/15 px-4 py-5">
+          <dt class="text-xs font-bold uppercase tracking-[0.14em] text-white/50">Zona</dt>
+          <dd class="mt-2 text-2xl font-bold">Madrid</dd>
+        </div>
+        <div class="py-5 pl-4">
+          <dt class="text-xs font-bold uppercase tracking-[0.14em] text-white/50">Reserva</dt>
+          <dd class="mt-2 text-2xl font-bold">WhatsApp</dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="relative min-h-[360px] overflow-hidden bg-[var(--cg-surface-dark-elevated)] md:min-h-[520px]">
+      <div class="absolute inset-x-8 top-10 h-px bg-white/20"></div>
+      <div class="absolute inset-y-8 right-10 w-px bg-white/15"></div>
+      <div class="absolute left-8 top-8 text-xs font-bold uppercase tracking-[0.16em] text-white/45">
+        Placeholder visual
+      </div>
+
+      <div class="absolute inset-x-8 bottom-12 h-28 bg-white/5"></div>
+      <div class="absolute bottom-24 left-1/2 h-24 w-[82%] -translate-x-1/2 rounded-[50%] border border-white/20 bg-gradient-to-r from-white/5 via-white/20 to-white/5 blur-[1px]"></div>
+      <div class="absolute bottom-28 left-1/2 h-20 w-[72%] -translate-x-1/2 skew-x-[-12deg] bg-white/90"></div>
+      <div class="absolute bottom-40 left-[18%] h-24 w-[46%] skew-x-[-18deg] bg-white"></div>
+      <div class="absolute bottom-36 right-[14%] h-20 w-[28%] skew-x-[18deg] bg-white/95"></div>
+      <div class="absolute bottom-24 left-[18%] size-20 rounded-full border-[14px] border-[var(--cg-surface-dark)] bg-white"></div>
+      <div class="absolute bottom-24 right-[20%] size-20 rounded-full border-[14px] border-[var(--cg-surface-dark)] bg-white"></div>
+      <div class="absolute bottom-16 left-8 right-8 h-px bg-white/30"></div>
+
+      <div class="absolute bottom-8 left-8 right-8 flex items-end justify-between gap-6 text-white">
+        <p class="max-w-xs text-sm font-light leading-6 text-white/70">
+          Espacio reservado para fotografia real de coche limpio o proceso de detailing. No se usaran resultados falsos.
+        </p>
+        <p class="hidden text-right text-5xl font-bold text-white/10 md:block">01</p>
+      </div>
+    </div>
+  </div>
+</section>

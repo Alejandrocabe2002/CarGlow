@@ -2,9 +2,38 @@
 import { site } from '../../data/site';
 ---
 
-<footer class="border-t border-white/10 bg-neutral-950 px-6 py-8 text-sm text-neutral-400">
-  <div class="mx-auto flex max-w-6xl flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-    <p>© 2026 {site.name}. Servicio de detailing a domicilio en Madrid.</p>
-    <p>Politica de privacidad y aviso legal pendientes.</p>
+<footer id="contacto" class="bg-[var(--cg-surface-soft)] text-[var(--cg-body)]">
+  <div class="container-cg grid gap-10 py-16 md:grid-cols-[1.2fr_0.8fr_0.8fr]">
+    <div>
+      <p class="text-sm font-bold uppercase tracking-[0.18em] text-[var(--cg-ink)]">{site.name}</p>
+      <p class="mt-4 max-w-md text-sm leading-6">
+        Detailing y limpieza premium de coches a domicilio en Madrid. Reserva por WhatsApp y recupera el brillo de tu coche sin desplazarte.
+      </p>
+    </div>
+
+    <div>
+      <h2 class="text-sm font-bold uppercase tracking-[0.14em] text-[var(--cg-ink)]">Contacto</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li>{site.location}</li>
+        <li><a class="hover:text-[var(--cg-ink)]" href={`mailto:${site.email}`}>{site.email}</a></li>
+        <li><a class="font-bold text-[var(--cg-primary)]" href={site.whatsapp.href}>Reservar por WhatsApp</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="text-sm font-bold uppercase tracking-[0.14em] text-[var(--cg-ink)]">Legal</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a class="hover:text-[var(--cg-ink)]" href="#">Politica de privacidad</a></li>
+        <li><a class="hover:text-[var(--cg-ink)]" href="#">Aviso legal</a></li>
+        <li class="text-[var(--cg-muted)]">Textos legales pendientes.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="border-t border-[var(--cg-hairline)]">
+    <div class="container-cg flex flex-col gap-2 py-6 text-sm text-[var(--cg-muted)] sm:flex-row sm:items-center sm:justify-between">
+      <p>© 2026 {site.name}</p>
+      <p>Servicio de detailing a domicilio en Madrid</p>
+    </div>
   </div>
 </footer>

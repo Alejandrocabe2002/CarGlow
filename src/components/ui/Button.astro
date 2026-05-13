@@ -2,14 +2,15 @@
 interface Props {
   href: string;
   variant?: 'primary' | 'secondary';
+  class?: string;
 }
 
-const { href, variant = 'primary' } = Astro.props;
+const { href, variant = 'primary', class: className = '' } = Astro.props;
 const classes = variant === 'primary'
-  ? 'bg-blue-500 text-white hover:bg-blue-400'
-  : 'border border-white/15 text-white hover:border-white/40 hover:bg-white/5';
+  ? 'bg-[var(--cg-primary)] text-white hover:bg-[var(--cg-primary-active)]'
+  : 'border border-white text-white hover:bg-white hover:text-[var(--cg-ink)]';
 ---
 
-<a href={href} class={`inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition ${classes}`}>
+<a href={href} class={`inline-flex h-12 items-center justify-center px-8 text-sm font-bold tracking-[0.04em] transition ${classes} ${className}`}>
   <slot />
 </a>
