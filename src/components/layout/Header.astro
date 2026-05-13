@@ -1,0 +1,12 @@
+---
+import { site } from '../../data/site';
+---
+
+<header class="border-b border-white/10 bg-neutral-950/80 text-white backdrop-blur">
+  <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4" aria-label="Navegacion principal">
+    <a href="/" class="text-sm font-semibold uppercase tracking-[0.25em]">{site.name}</a>
+    <a href={site.whatsapp.href} class="rounded-full bg-blue-500 px-4 py-2 text-sm font-semibold hover:bg-blue-400">
+      WhatsApp
+    </a>
+  </nav>
+</header>

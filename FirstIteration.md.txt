@@ -1,0 +1,446 @@
+Actúa como GPT-5.5 en modo agente senior frontend, experto en Astro, TypeScript, Tailwind CSS, UI/UX premium, SEO local, accesibilidad, performance web, despliegue estático y trabajo en entorno WSL con OpenCode.
+
+Vamos a desarrollar desde cero el frontend de CarGlow, una marca de detailing y limpieza premium de coches a domicilio en Madrid.
+
+CONTEXTO DEL PRODUCTO
+CarGlow ofrece limpieza y detailing premium a domicilio en Madrid. La propuesta principal es que el cliente no tenga que desplazarse y pueda reservar por WhatsApp. El servicio debe transmitir confianza, calidad, precisión, brillo, cuidado del vehículo y estética premium automotriz.
+
+La fuente principal de contenido del producto incluye:
+- Hero con mensaje emocional: el coche no es solo transporte, es una declaración.
+- Servicio profesional a domicilio en Madrid.
+- Precio inicial desde 40€ por coche.
+- CTA principal: reservar cita por WhatsApp.
+- Problema: polvo, contaminación, sol, microarañazos, pérdida de brillo y desgaste interior.
+- Solución: agua desmineralizada, productos biodegradables premium, técnicas seguras y servicio 100% a domicilio.
+- Servicios:
+  - Lavado Premium Express – 40€
+  - Detallado de Interiores
+  - Tratamiento Cerámico & Pulido
+- Sección de resultados reales antes/después.
+- Testimonios.
+- FAQ.
+- Sobre nosotros.
+- Contacto.
+- Footer con legales.
+
+REFERENCIA VISUAL
+Usa como referencia principal el DESIGN.md inspirado en BMW de getdesign.md, por su estética premium automotriz, precisión visual, contraste, fotografía protagonista y sensación de calidad.
+
+Comando recomendado para traer esa referencia al proyecto:
+
+npx getdesign@latest add bmw
+
+Importante:
+- No copies marca, logos, textos ni identidad de BMW.
+- Usa el DESIGN.md solo como guía estética.
+- Adapta todo a CarGlow.
+- La web debe sentirse premium, limpia, moderna, confiable y enfocada a conversión.
+- Evita una estética demasiado agresiva tipo motorsport.
+- Evita una web excesivamente fría o vacía.
+- Prioriza móvil, velocidad, claridad y reserva por WhatsApp.
+
+OBJETIVO GENERAL
+Desarrollar de forma iterativa conmigo el frontend completo de CarGlow, trabajando desde WSL con OpenCode, dejando el proyecto listo para subir a GitHub y desplegar inicialmente con coste 0.
+
+STACK RECOMENDADO
+Usa este stack salvo que detectes una razón técnica fuerte para cambiarlo:
+
+- Astro
+- TypeScript
+- Tailwind CSS
+- Componentes Astro
+- React solo si hace falta alguna isla interactiva real
+- Iconos con lucide-react o alternativa ligera compatible
+- Deploy estático en Cloudflare Pages como primera opción
+- Netlify como segunda opción
+- Vercel solo si se confirma que el plan encaja con uso comercial o se acepta pasar a plan de pago
+
+NO uses Next.js de entrada salvo que justifiques claramente que hace falta.
+
+FORMA DE TRABAJO
+Trabaja de forma iterativa, profesional y segura.
+
+Antes de escribir mucho código:
+1. Inspecciona el directorio actual.
+2. Detecta si ya existe proyecto, package.json, git, framework o archivos previos.
+3. Si el proyecto está vacío, crea uno nuevo.
+4. Si ya existe algo, no lo borres sin explicarlo.
+5. Propón un plan breve por fases antes de modificar archivos importantes.
+
+No hagas preguntas innecesarias. Si falta un dato que puede bloquear producción, usa placeholders razonables y deja una lista clara de pendientes. Por ejemplo:
+- Número real de WhatsApp.
+- Email real.
+- Dominio.
+- Imágenes reales antes/después.
+- Textos legales.
+- Política de privacidad.
+- Aviso legal.
+- Cookies si aplican.
+- Dirección/zona de cobertura exacta.
+
+ENTORNO WSL
+Asume que trabajo desde Windows con WSL.
+
+Debes:
+- Usar comandos compatibles con Linux/WSL.
+- Evitar comandos destructivos.
+- No usar rutas de Windows salvo que sea necesario.
+- Comprobar versiones de Node, npm/pnpm y git antes de iniciar.
+- Recomendar pnpm si está disponible; si no, usar npm.
+- Mantener instrucciones claras para ejecutar en local.
+
+Comandos iniciales esperados, adaptándolos al estado real del proyecto:
+
+node -v
+npm -v
+git --version
+pwd
+ls -la
+
+Si no existe proyecto:
+
+npm create astro@latest . -- --template basics --typescript strict
+npm install
+npm install -D tailwindcss @tailwindcss/vite
+npm install lucide-react
+
+Si Astro/Tailwind han cambiado su instalación, comprueba la documentación local o el estado del proyecto y adapta los pasos.
+
+ARQUITECTURA ESPERADA
+Organiza el frontend de forma limpia y escalable.
+
+Estructura sugerida:
+
+src/
+  components/
+    layout/
+      Header.astro
+      Footer.astro
+      Section.astro
+    sections/
+      Hero.astro
+      Problem.astro
+      Solution.astro
+      Services.astro
+      Results.astro
+      Testimonials.astro
+      FAQ.astro
+      About.astro
+      ContactCTA.astro
+    ui/
+      Button.astro
+      Card.astro
+      Badge.astro
+      WhatsAppButton.astro
+  data/
+    site.ts
+    services.ts
+    faq.ts
+    testimonials.ts
+  layouts/
+    BaseLayout.astro
+  pages/
+    index.astro
+  styles/
+    global.css
+
+public/
+  images/
+    placeholders/
+  favicon.svg
+
+DOCUMENTACIÓN INTERNA
+Crea o actualiza estos archivos:
+
+README.md
+DESIGN_NOTES.md
+TODO.md
+DEPLOY.md
+
+README.md debe explicar:
+- Qué es CarGlow.
+- Stack usado.
+- Cómo instalar.
+- Cómo ejecutar en local.
+- Cómo hacer build.
+- Cómo desplegar.
+
+DESIGN_NOTES.md debe explicar:
+- Qué referencia visual se usa.
+- Cómo se adapta a CarGlow.
+- Tokens visuales básicos.
+- Principios de UI.
+- Decisiones de diseño.
+
+TODO.md debe listar pendientes reales:
+- WhatsApp final.
+- Email final.
+- Fotos reales.
+- Legales.
+- Dominio.
+- Analítica.
+- SEO local avanzado.
+- Schema.org definitivo si faltan datos.
+
+DEPLOY.md debe explicar:
+- Opción recomendada: Cloudflare Pages.
+- Alternativa: Netlify.
+- Alternativa condicionada: Vercel.
+- Variables necesarias.
+- Comandos de build.
+- Pasos desde GitHub.
+
+DISEÑO UI/UX
+La web debe tener:
+
+1. Header
+- Logo textual CarGlow.
+- Navegación simple.
+- CTA visible a WhatsApp.
+- En móvil, menú sencillo o navegación compacta.
+
+2. Hero
+- Mensaje premium claro.
+- Subtítulo orientado a Madrid y servicio a domicilio.
+- CTA principal WhatsApp.
+- CTA secundario para ver servicios/resultados.
+- Visual premium con placeholder preparado para imagen de coche limpio/detailing.
+- Debe verse excelente en móvil.
+
+3. Problema
+- Explicar de forma breve lo que daña el coche:
+  - Polvo.
+  - Contaminación.
+  - Cal.
+  - Lavados incorrectos.
+  - Microarañazos.
+  - Pérdida de brillo.
+  - Interior deteriorado.
+
+4. Solución
+- Agua desmineralizada.
+- Productos biodegradables premium.
+- Técnicas seguras.
+- Servicio a domicilio.
+
+5. Servicios
+- Cards claras.
+- Lavado Premium Express desde 40€.
+- Detallado de interiores.
+- Pulido/tratamiento cerámico.
+- Cada card debe tener beneficios, no solo características.
+- CTA por servicio.
+
+6. Resultados reales
+- Preparar sección antes/después.
+- Si no hay imágenes reales, usar placeholders elegantes.
+- No fingir resultados reales si no hay fotos.
+- Dejar comentarios en TODO.md indicando que deben sustituirse.
+
+7. Testimonios
+- Usar los testimonios existentes como contenido provisional.
+- Diseñarlos de forma creíble y elegante.
+- No sobrecargar.
+
+8. FAQ
+- Preguntas claras:
+  - Duración.
+  - Necesidad de agua.
+  - Productos usados.
+  - Zona de cobertura.
+  - Cómo reservar.
+  - Métodos de pago si se desconoce, dejar genérico o pendiente.
+
+9. Sobre nosotros
+- Texto cercano, profesional y premium.
+- No sonar a corporación enorme si es un servicio local.
+- Transmitir obsesión por calidad, eficiencia y cuidado.
+
+10. Contacto / CTA final
+- WhatsApp protagonista.
+- Madrid.
+- Email placeholder.
+- Mensaje final potente.
+
+11. Footer
+- Copyright.
+- Enlaces legales placeholder.
+- Aviso de que legales están pendientes si no existen.
+
+ESTILO VISUAL
+Trabaja con una estética premium automotriz.
+
+Dirección visual:
+- Fondo oscuro elegante en secciones clave.
+- Blanco/negro/grises como base.
+- Acento azul eléctrico o azul premium para CTA.
+- Mucho espacio.
+- Tipografía limpia.
+- Cards con bordes sutiles.
+- Fotografías grandes o placeholders bien preparados.
+- Sensación de detailing profesional, no túnel de lavado barato.
+
+No uses:
+- Gradientes excesivos.
+- Efectos chillones.
+- Colores infantiles.
+- Animaciones pesadas.
+- Imágenes falsas que parezcan resultados reales inventados.
+- Demasiado texto.
+
+COPYWRITING
+Puedes mejorar los textos para conversión, pero respeta la intención original.
+
+Tono:
+- Premium.
+- Claro.
+- Cercano.
+- Directo.
+- Orientado a reserva.
+- Sin exageraciones imposibles.
+- Sin claims no verificables.
+
+SEO Y METADATOS
+Implementa SEO básico desde el inicio:
+
+- title optimizado.
+- meta description.
+- Open Graph.
+- Twitter card.
+- canonical si procede.
+- favicon.
+- lang="es".
+- estructura semántica correcta.
+- headings bien jerarquizados.
+- contenido orientado a “limpieza de coches a domicilio Madrid”, “detailing Madrid”, “lavado premium coche Madrid”.
+- Schema.org LocalBusiness o AutoWash si encaja, usando datos placeholder cuando falten y documentándolo.
+
+ACCESIBILIDAD
+Asegura:
+- Contraste suficiente.
+- Botones accesibles.
+- Labels o aria-labels cuando toque.
+- Navegación por teclado.
+- Textos alternativos.
+- HTML semántico.
+- No depender solo del color.
+
+PERFORMANCE
+Objetivos:
+- Web muy rápida.
+- JavaScript mínimo.
+- Imágenes optimizadas o preparadas para optimización.
+- Lighthouse alto.
+- CSS limpio.
+- No meter librerías pesadas si no hacen falta.
+
+WHATSAPP
+Centraliza el enlace de WhatsApp en una constante configurable.
+
+Ejemplo:
+const WHATSAPP_NUMBER = "34XXXXXXXXX"
+const WHATSAPP_MESSAGE = "Hola, quiero reservar una limpieza para mi coche con CarGlow."
+
+El enlace debe ser:
+https://wa.me/NUMERO?text=MENSAJE_ENCODED
+
+Si no tengo el número real, usa placeholder y déjalo en TODO.md.
+
+DESPLIEGUE
+Prepara el proyecto para Cloudflare Pages.
+
+Build command:
+npm run build
+
+Output directory:
+dist
+
+Crea DEPLOY.md con pasos claros:
+1. Subir repo a GitHub.
+2. Entrar en Cloudflare Pages.
+3. Conectar repo.
+4. Framework preset: Astro.
+5. Build command: npm run build.
+6. Output directory: dist.
+7. Añadir dominio cuando exista.
+8. Verificar producción.
+
+No ejecutes despliegue real sin que yo te dé acceso o confirme los pasos manuales necesarios.
+
+GIT
+Trabaja con buenas prácticas:
+- Si no hay repo, inicializa git solo si lo ves adecuado y me avisas.
+- Haz cambios agrupados.
+- Propón commits por hitos.
+- No metas node_modules.
+- Asegura .gitignore correcto.
+
+VALIDACIÓN
+Antes de cerrar cada iteración:
+- Ejecuta npm run build.
+- Corrige errores.
+- Revisa responsive básico.
+- Revisa que no haya imports rotos.
+- Revisa que los placeholders estén documentados.
+- Resume qué has hecho.
+- Indica qué falta.
+- Propón el siguiente paso.
+
+MODO ITERATIVO
+Quiero que trabajes conmigo por fases:
+
+Fase 1:
+- Inspección del entorno y creación del proyecto base.
+- Astro + TypeScript + Tailwind.
+- Estructura limpia.
+- Primer build funcionando.
+
+Fase 2:
+- Diseño base.
+- Layout.
+- Header.
+- Footer.
+- Tokens visuales.
+- Datos centralizados.
+
+Fase 3:
+- Landing completa con todas las secciones.
+- CTA WhatsApp.
+- Servicios.
+- FAQ.
+- Testimonios.
+- Resultados placeholder.
+
+Fase 4:
+- SEO, accesibilidad y performance.
+- Metadatos.
+- Schema.org.
+- Revisión responsive.
+
+Fase 5:
+- Documentación.
+- README.
+- DEPLOY.
+- TODO.
+- Preparación GitHub.
+
+Fase 6:
+- Despliegue coste 0.
+- Preferencia: Cloudflare Pages.
+- Alternativa: Netlify.
+- Vercel solo si se confirma que encaja.
+
+COMPORTAMIENTO ESPERADO
+No me des solo teoría. Ejecuta, crea archivos, modifica código, valida y avanza.
+
+En cada iteración:
+1. Dime brevemente qué vas a hacer.
+2. Ejecuta los comandos necesarios.
+3. Muestra resultados importantes.
+4. Corrige problemas.
+5. Haz build.
+6. Resume cambios.
+7. Dime qué revisar visualmente.
+8. Propón el siguiente paso.
+
+No termines hasta que el frontend esté funcional, documentado y preparado para desplegar.
