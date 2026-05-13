@@ -15,6 +15,7 @@ import { site } from '../../data/site';
       <h2 class="text-sm font-bold uppercase tracking-[0.14em] text-[var(--cg-ink)]">Contacto</h2>
       <ul class="mt-4 space-y-3 text-sm">
         <li>{site.location}</li>
+        <li><a class="hover:text-[var(--cg-ink)]" href={site.phoneHref}>{site.phone}</a></li>
         <li><a class="hover:text-[var(--cg-ink)]" href={`mailto:${site.email}`}>{site.email}</a></li>
         <li><a class="font-bold text-[var(--cg-primary)]" href={site.whatsapp.href}>Reservar por WhatsApp</a></li>
       </ul>
