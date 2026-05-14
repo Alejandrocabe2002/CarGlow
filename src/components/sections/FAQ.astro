@@ -1,1 +1,30 @@
-<!-- Placeholder para preguntas frecuentes. -->
+---
+import Badge from '../ui/Badge.astro';
+import { faq } from '../../data/faq';
+---
+
+<section id="faq" class="bg-white py-20 text-[var(--cg-ink)]">
+  <div class="container-cg grid gap-12 lg:grid-cols-[0.78fr_1.22fr]">
+    <div>
+      <Badge>FAQ</Badge>
+      <h2 class="mt-6 max-w-xl text-4xl font-bold leading-[1.1] md:text-5xl">
+        Preguntas frecuentes antes de reservar.
+      </h2>
+      <p class="mt-6 max-w-lg text-lg font-light leading-8 text-[var(--cg-body)]">
+        Resolvemos las dudas clave para que puedas pedir cita por WhatsApp con toda la informacion necesaria.
+      </p>
+    </div>
+
+    <div class="divide-y divide-[var(--cg-hairline)] border-y border-[var(--cg-hairline)]">
+      {faq.map((item) => (
+        <details class="group py-6">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-xl font-bold leading-snug marker:hidden">
+            {item.question}
+            <span class="text-2xl font-light text-[var(--cg-primary)] transition group-open:rotate-45" aria-hidden="true">+</span>
+          </summary>
+          <p class="mt-4 max-w-2xl text-base font-light leading-7 text-[var(--cg-body)]">{item.answer}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,1 +1,31 @@
-<!-- Placeholder para sobre nosotros. -->
+---
+import Badge from '../ui/Badge.astro';
+
+const principles = [
+  'Cuidado visual del vehiculo por encima de la velocidad',
+  'Procesos seguros para pintura, llantas, interior y plasticos',
+  'Servicio movil para ahorrar desplazamientos dentro de Madrid',
+];
+---
+
+<section id="sobre-car-glow" class="bg-[var(--cg-surface-soft)] py-20 text-[var(--cg-ink)]">
+  <div class="container-cg grid gap-px border border-[var(--cg-hairline)] bg-[var(--cg-hairline)] lg:grid-cols-[1fr_1fr]">
+    <div class="bg-white p-8 md:p-12">
+      <Badge>Sobre CarGlow</Badge>
+      <h2 class="mt-6 max-w-xl text-4xl font-bold leading-[1.1] md:text-5xl">
+        Un servicio de limpieza premium pensado para clientes que valoran su tiempo.
+      </h2>
+    </div>
+
+    <div class="bg-white p-8 md:p-12">
+      <p class="text-lg font-light leading-8 text-[var(--cg-body)]">
+        CarGlow nace para llevar una experiencia de detailing clara, cuidada y a domicilio. El objetivo es sencillo: que el coche recupere presencia sin que tengas que reorganizar el dia para llevarlo a un centro.
+      </p>
+      <ul class="mt-8 divide-y divide-[var(--cg-hairline)] border-y border-[var(--cg-hairline)]">
+        {principles.map((principle) => (
+          <li class="py-4 text-sm font-bold uppercase tracking-[0.1em] text-[var(--cg-ink)]">{principle}</li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>

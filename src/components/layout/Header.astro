@@ -6,6 +6,7 @@ const navItems = [
   { label: 'Proceso', href: '#problema' },
   { label: 'Servicios', href: '#servicios' },
   { label: 'Resultados', href: '#resultados' },
+  { label: 'FAQ', href: '#faq' },
   { label: 'Contacto', href: '#contacto' },
 ];
 ---
@@ -17,7 +18,7 @@ const navItems = [
       <span>{site.name}</span>
     </a>
 
-    <div class="hidden items-center gap-8 lg:flex">
+    <div class="hidden items-center gap-6 xl:flex">
       {navItems.map((item) => (
         <a href={item.href} class="text-sm font-normal tracking-[0.03em] text-[var(--cg-body)] transition hover:text-[var(--cg-ink)]">
           {item.label}
