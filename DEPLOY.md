@@ -8,8 +8,8 @@ Cloudflare Pages es la opcion recomendada para coste inicial 0 y despliegue esta
 
 - Cuenta de GitHub con el repositorio `CarGlow`.
 - Cuenta de Cloudflare.
-- Rama `main` protegida o usada como rama de produccion.
-- PRs mergeadas a `main` desde GitHub.
+- Rama `bootstrap` protegida o usada como rama de produccion.
+- PRs mergeadas a `bootstrap` desde GitHub.
 
 ### Configuracion Inicial En Cloudflare
 
@@ -21,7 +21,7 @@ Cloudflare Pages es la opcion recomendada para coste inicial 0 y despliegue esta
 6. Pulsa `Connect to Git`.
 7. Autoriza Cloudflare Pages para acceder a GitHub.
 8. Selecciona el repositorio `Alejandrocabe2002/CarGlow`.
-9. Elige la rama de produccion: `main`.
+9. Elige la rama de produccion: `bootstrap`.
 10. Configura el proyecto:
     - Project name: `carglow` o `carglow-frontend`.
     - Framework preset: `Astro`.
@@ -35,9 +35,9 @@ Cloudflare Pages es la opcion recomendada para coste inicial 0 y despliegue esta
 
 Una vez conectado el repositorio con Cloudflare Pages:
 
-- Cada merge a `main` dispara un nuevo despliegue de produccion.
+- Cada merge a `bootstrap` dispara un nuevo despliegue de produccion.
 - Cada PR puede generar preview deployments si Cloudflare lo mantiene activado.
-- GitHub Actions ejecuta `npm ci` y `npm run build` en PRs hacia `main` y pushes a `main`.
+- GitHub Actions ejecuta `npm ci` y `npm run build` en PRs hacia `bootstrap` y pushes a `bootstrap`.
 
 El pipeline actual esta en `.github/workflows/ci.yml`.
 
@@ -48,7 +48,7 @@ El pipeline actual esta en `.github/workflows/ci.yml`.
 3. Abrir PR manual en GitHub.
 4. Esperar a que pase `CI / Build Astro site`.
 5. Revisar visualmente el preview de Cloudflare Pages si esta disponible.
-6. Mergear PR a `main`.
+6. Mergear PR a `bootstrap`.
 7. Cloudflare Pages redespliega produccion automaticamente.
 8. Verificar la URL publica.
 
