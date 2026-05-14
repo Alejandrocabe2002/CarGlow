@@ -1,10 +1,14 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import About from '../components/sections/About.astro';
+import ContactCTA from '../components/sections/ContactCTA.astro';
+import FAQ from '../components/sections/FAQ.astro';
 import Hero from '../components/sections/Hero.astro';
 import Problem from '../components/sections/Problem.astro';
 import Results from '../components/sections/Results.astro';
 import Services from '../components/sections/Services.astro';
 import Solution from '../components/sections/Solution.astro';
+import Testimonials from '../components/sections/Testimonials.astro';
 import { site } from '../data/site';
 ---
 
@@ -18,5 +22,9 @@ import { site } from '../data/site';
     <Solution />
     <Services />
     <Results />
+    <Testimonials />
+    <About />
+    <FAQ />
+    <ContactCTA />
   </main>
 </BaseLayout>

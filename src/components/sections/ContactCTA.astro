@@ -1,1 +1,27 @@
-<!-- Placeholder para CTA final de contacto. -->
+---
+import Button from '../ui/Button.astro';
+import { site } from '../../data/site';
+---
+
+<section id="contacto" class="bg-[var(--cg-surface-dark)] py-20 text-white">
+  <div class="container-cg">
+    <div class="grid gap-10 border border-white/15 bg-white/5 p-8 md:p-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+      <div>
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-white/55">Reserva directa</p>
+        <h2 class="mt-6 max-w-3xl text-4xl font-bold leading-[1.05] md:text-6xl">
+          Cuentanos el modelo y el estado del coche. Te damos la mejor opcion.
+        </h2>
+      </div>
+
+      <div class="lg:justify-self-end">
+        <p class="max-w-md text-lg font-light leading-8 text-white/70">
+          Escribenos por WhatsApp o llama al {site.phone}. Te orientamos sobre servicio, tiempo estimado y disponibilidad en Madrid.
+        </p>
+        <div class="mt-8 flex flex-col gap-3 sm:flex-row lg:justify-end">
+          <Button href={site.whatsapp.href}>Reservar por WhatsApp</Button>
+          <Button href={site.phoneHref} variant="secondary">Llamar ahora</Button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import Footer from '../components/layout/Footer.astro';
 import Header from '../components/layout/Header.astro';
+import { site } from '../data/site';
 
 interface Props {
   title: string;
@@ -9,6 +10,23 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: site.name,
+  description,
+  telephone: site.phone,
+  priceRange: 'Desde 40 EUR',
+  areaServed: {
+    '@type': 'City',
+    name: site.location,
+  },
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: site.location,
+    addressCountry: 'ES',
+  },
+};
 ---
 
 <!doctype html>
@@ -21,8 +39,11 @@ const { title, description } = Astro.props;
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#1a2129" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)}></script>
     <title>{title}</title>
   </head>
   <body>

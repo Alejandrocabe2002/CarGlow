@@ -1,1 +1,35 @@
-<!-- Placeholder para testimonios provisionales. -->
+---
+import Badge from '../ui/Badge.astro';
+
+const reviewStandards = [
+  'Solo resenas verificadas o aprobadas por el cliente',
+  'Sin fotos de resultado hasta tener trabajos propios documentados',
+  'Publicacion con nombre abreviado para proteger privacidad',
+];
+---
+
+<section id="testimonios" class="bg-[var(--cg-surface-dark)] py-20 text-white">
+  <div class="container-cg grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+    <div>
+      <Badge tone="dark">Testimonios</Badge>
+      <h2 class="mt-6 max-w-2xl text-4xl font-bold leading-[1.1] md:text-5xl">
+        La prueba social se publicara cuando haya resenas reales y verificables.
+      </h2>
+      <p class="mt-6 max-w-xl text-lg font-light leading-8 text-white/70">
+        Preferimos lanzar con honestidad antes que simular opiniones. Esta zona queda preparada para incorporar valoraciones reales tras los primeros servicios documentados.
+      </p>
+    </div>
+
+    <div class="border border-white/15 bg-white/5 p-6 md:p-8">
+      <p class="text-sm font-bold uppercase tracking-[0.16em] text-white/55">Criterio editorial</p>
+      <ul class="mt-8 divide-y divide-white/15 border-y border-white/15">
+        {reviewStandards.map((standard, index) => (
+          <li class="flex gap-5 py-5 text-white">
+            <span class="text-sm font-bold text-[var(--cg-primary)]">0{index + 1}</span>
+            <span class="text-base font-light leading-7 text-white/75">{standard}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>
